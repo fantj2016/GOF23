@@ -9,7 +9,8 @@ public class Singleton3 {
      */
     private Singleton3(){}
 
-    private static Singleton3 instance = new Singleton3();
+    // 防止内部操作将 instance 对象做了修改
+    private static final Singleton3 instance = new Singleton3();
 
     public static Singleton3 getInstance(){
         return instance;
